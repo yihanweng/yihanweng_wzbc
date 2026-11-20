@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>温州商学院 - 首页</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/auth.css">       
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- <div> 块级元素 -->
+            <div class="logo">温州商学院</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">首页</a></li>
+                <li><a href="characters.html">校领导介绍</a></li>
+                <li><a href="story.html">校园美景</a></li>
+                <li><a href="video.html">宣传视频</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主图 -->
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/主页.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <section class="welcome-section">
+            <!-- 内容分组（<h1>-<h6>-->
+            <h1>欢迎来到温州商学院</h1>
+            <p>“打造”商科教育高地；创建“学商科来温商”品牌</p>
+        </section>
+        <div class="login-logo-container">
+            <!-- 登录表单 -->
+            <main class="main-content">
+                <!-- <main> 标签用于表示文档、应用程序、网站或页面的主要内容，该内容应当是独一无二的，不包含任何在一系列文档中重复出现的内容，如侧边栏、导航栏、版权信息、网站 logo 等。 -->
+                <div class="auth-container">
+                    <h2>登录</h2>
+                    <form class="auth-form">
+                        <div class="form-group">
+                            <label for="username">用户名</label>
+                            <!-- <label> 标签用来为表单元素创建关联的文本标签。 -->
+                            <input type="text" id="username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">密码</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="auth-button">登录</button>
+                        </div>
+                        <div class="auth-links">
+                            <p>还没有账号？<a href="register.html">立即注册</a></p>
+                        </div>
+                    </form>
+                </div>
+            </main>
+            <!-- 学校 logo -->
+            <div class="movie-brief-img">
+                <img src="images/温商logo.png" alt="" />
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>招生电话</h3>
+                <p>0577-86698888<br>0577-86691111（国际班）</p>
+            </div>
+           
+            <div class="footer-section">
+                <h3>学校地址</h3>
+                <p>温州市茶山高教园区</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>@版权｜翁一涵</p>
+        </div>
+    </footer>
+</body>
+</html>

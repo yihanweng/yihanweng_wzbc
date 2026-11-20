@@ -1,0 +1,304 @@
+/* 简介页面样式 */
+.page-title {
+    text-align: center;
+    color: #4a90e2;
+    margin-bottom: 32px; 
+    font-size: 40px; 
+    position: relative;
+}
+
+.page-title::after {
+    /* 伪元素选择器 */
+    content: '';
+    /* 在元素内容之前或之后插入生成的内容。这个属性只能与伪元素一起使用，不能直接应用于普通元素。 */
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #4a90e2;
+    margin: 16px auto; 
+}
+
+/* 引言样式 */
+.story-intro {
+    margin: 32px 0; 
+    padding: 32px; 
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.quote-box {
+    text-align: center;
+    padding: 32px; 
+    border-left: 4px solid #4a90e2;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.quote-box blockquote {
+    font-size: 24px; 
+    color: #333;
+    margin-bottom: 16px; 
+    font-style: italic;
+}
+
+.quote-author {
+    color: #666;
+    font-size: 17.6px; 
+}
+
+/* 线样式 */
+.timeline-section {
+    margin: 64px 0; 
+    padding: 32px; 
+}
+
+.section-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 48px; 
+    position: relative;
+}
+
+.timeline-symmetry {
+    display: flex;
+    flex-direction: column;
+    gap: 48px; 
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 220px;
+}
+
+.timeline-img-col {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 32px;
+}
+
+.timeline-img-col img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    border: 2px solid #eee;
+    background: #fff;
+}
+
+.timeline-center {
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    /* 控制元素在 Z 轴（垂直于屏幕的轴）上的堆叠顺序，也就是元素的前后覆盖关系。z-index 值较大的元素会覆盖在 z-index 值较小的元素之上。z-index: 2; 表示该元素的堆叠顺序为 2，会覆盖那些 z-index 值小于 2 的元素，但会被 z-index 值大于 2 的元素覆盖。 */
+}
+
+.timeline-dot {
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border: 4px solid #4a90e2;
+    border-radius: 50%;
+    margin: 0 auto;
+    z-index: 3;
+}
+
+.timeline-line {
+    width: 4px;
+    flex: 1;
+    background: #4a90e2;
+    margin-top: -2px;
+    margin-bottom: -2px;
+    min-height: 120px;
+    z-index: 1;
+}
+
+.timeline-text-col {
+    flex: 2;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+    padding: 32px 32px 32px 24px; 
+    margin-left: 16px;
+}
+
+.timeline-text-col h3 {
+    color: #357abd;
+    margin-bottom: 16px; 
+    font-size: 20.8px; 
+}
+
+.timeline-text-col p {
+    color: #444;
+    line-height: 1.8;
+    font-size: 17.28px; 
+}
+
+/* 主要部分样式 */
+.story-main {
+    margin: 64px 0; 
+}
+
+.story-card {
+    display: flex;
+    margin: 48px 0; 
+    gap: 32px; 
+    align-items: center;
+}
+
+.story-card.left {
+    flex-direction: row;
+}
+
+.story-card.right {
+    flex-direction: row-reverse;
+    /* 控制弹性容器（flex container）内子元素的排列方向。在弹性布局中，flex-direction 属性有四个可能的值：row、row-reverse、column 和 column-reverse。其中，row-reverse 表示子元素会按照水平方向从右到左进行排列，与 row（从左到右排列）相反。 */
+}
+
+.story-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.story-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.story-text {
+    flex: 1;
+    padding: 32px; 
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.story-text h3 {
+    color: #4a90e2;
+    margin-bottom: 16px; 
+    font-size: 24px; 
+}
+
+.story-highlight {
+    margin: 64px 0; 
+    padding: 48px; 
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    /* 创建线性渐变、135 度表示从左下角到右上角的方向 */
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.highlight-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.highlight-content h3 {
+    font-size: 32px; 
+    margin-bottom: 24px; 
+}
+
+/* 结尾部分样式 */
+.story-ending {
+    margin: 64px 0; 
+    padding: 48px; 
+    background: #f8f9fa;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.ending-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ending-content h2 {
+    color: #4a90e2;
+    margin-bottom: 32px; 
+    font-size: 32px; 
+}
+
+.ending-quote {
+    margin-top: 32px; 
+    padding: 32px; 
+    border-top: 2px solid #4a90e2;
+    font-style: italic;
+    font-size: 19.2px; 
+    color: #666;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .story-card {
+        flex-direction: column !important;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-dot {
+        left: 20px;
+    }
+
+    .timeline-content {
+        width: calc(100% - 50px);
+        margin-left: 50px !important;
+        flex-direction: column !important;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        flex-direction: column !important;
+    }
+
+    .timeline-image {
+        min-width: 100%;
+        margin-top: 16px; 
+    }
+
+    .story-image {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .timeline-row {
+        flex-direction: column;
+        min-height: unset;
+    }
+    .timeline-img-col {
+        justify-content: center;
+        padding-right: 0;
+        margin-bottom: 16px; 
+    }
+    .timeline-img-col img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+    .timeline-center {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        margin: 16px 0; 
+    }
+    .timeline-line {
+        display: none;
+    }
+    .timeline-text-col {
+        margin-left: 0;
+        padding: 19.2px;
+    }
+} 

@@ -1,0 +1,45 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 60px; 
+    max-height: 450px; 
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: 450px; 
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%; 
+}
+
+.carousel-item.active {
+    opacity: 1;
+    /* 伪类选择器的应用，它主要用于控制轮播图中当前激活项的显示状态。opacity: 1; 样式，从而完全显示出来。而其他没有 active 类的 carousel-item 元素，由于 opacity: 0;，会处于完全透明的状态，也就是不可见 */
+}
+
+.carousel-item img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    /* 用于指定替换元素（如 <img> 和 <video>）如何适应其容器的尺寸。当使用 object-fit: cover; 时，元素会保持其宽高比，并填充整个容器，可能会裁剪掉元素的部分内容以确保完全覆盖容器。 */
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        height: 300px; 
+        max-height: 300px;
+        margin: 60px 16px 0; 
+    }
+    .carousel-inner {
+        height: 100%;
+    }
+    .carousel-item img {
+         height: 100%;
+    }
+} 

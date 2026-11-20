@@ -1,0 +1,260 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* 导航栏样式 */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px; 
+    display: flex;
+    /* 弹性容器 */
+    justify-content: space-between;
+    /* 主轴（main axis）上的对齐方式和间距分布 */
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px; 
+    font-weight: bold;
+    color: #4a90e2;
+    margin-left: -8px; 
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 32px; 
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4a90e2;
+}
+
+.nav-links a.active {
+    color: #4a90e2;
+}
+
+/* 主要内容区域 */
+.main-content {
+    max-width: 1200px;
+    margin: 80px auto 32px; 
+    padding: 32px; 
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.welcome-section {
+    text-align: center;
+    padding: 32px 0; 
+}
+
+.welcome-section h1 {
+    color: #4a90e2;
+    margin-bottom: 16px; 
+}
+
+/* 登录表单和 logo 容器样式 */
+.login-logo-container {
+    display: flex;
+    justify-content: space-between;
+    /* 在弹性布局（Flexbox）和网格布局（Grid）中控制元素在主轴上的对齐方式。当使用该属性值时，元素会沿着主轴均匀分布，第一个元素会紧贴容器的起始边缘，最后一个元素会紧贴容器的结束边缘，元素之间会有相等的间距。 */
+    align-items: center;
+    gap: 32px; 
+}
+
+/* 简介并排布局 */
+.movie-brief-img {
+    width: 30%; 
+}
+.movie-brief-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 900px) {
+    .movie-brief {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 16px; 
+    }
+    .movie-brief-img {
+        max-width: 100%;
+        width: 100%;
+        margin-top: 16px; 
+    }
+    .login-logo-container {
+        flex-direction: column;
+    }
+}
+
+/* 信息表格样式 */
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    /* 控制表格单元格之间的边框如何显示。当设置为 collapse 时，相邻单元格的边框会合并为一条边框，而不是各自显示。 */
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.info-table th,
+.info-table td {
+    padding: 16px; 
+    text-align: left;
+    border: 1px solid #eee;
+}
+
+.info-table th {
+    background-color: #4a90e2;
+    color: white;
+    font-weight: 500;
+    width: 20%;
+}
+
+.info-table td {
+    color: #666;
+}
+
+.info-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.info-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* 页脚样式 */
+.footer {
+    background-color: #333;
+    color: #ffffff;
+    padding: 48px 0 16px; 
+    margin-top: 48px; 
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 定义网格容器的列结构。它将容器划分为3 列，每列宽度为1fr（即平均分配剩余空间）。 */
+    gap: 32px; 
+    padding: 0 32px; 
+}
+
+.footer-section h3 {
+    color: #4a90e2;
+    margin-bottom: 16px; 
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px; 
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #4a90e2;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 32px; 
+    padding-top: 16px; 
+    border-top: 1px solid #555;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        margin-top: 16px; 
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin: 8px 0; 
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+
+
+    .info-table th,
+    .info-table td {
+        padding: 12.8px; 
+        font-size: 14.4px; 
+    }
+}
+
+.auth-container {
+    max-width: 400px;
+    margin: 32px auto; 
+    padding: 40px; 
+    background-color: #e0f2f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-left: 32px; 
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .login-logo-container {
+        flex-direction: column;
+    }
+    .auth-container {
+        margin-left: 0;
+    }
+    .movie-brief-img {
+        width: 100%;
+    }
+}
